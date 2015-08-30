@@ -1,0 +1,25 @@
+{
+  "name": "catchphrase.ly",
+  "version": "1.0.0",
+  "description": "Catch Phrase game integrating Express and Mongo DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiejenn/CatchPhrase.ly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katiejenn/CatchPhrase.ly/issues"
+  },
+  "homepage": "https://github.com/katiejenn/CatchPhrase.ly#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.3",
+    "underscore": "^1.8.3"
+  }
+}
