@@ -19,17 +19,19 @@ app.get("/", function (req, res){
   res.sendFile(path.join(views + 'index.html'));
 });
 
-app.get("/foods", function (req, res){
-  // render foods index as JSON
-  db.Food.find({}, function(err, foods){
-    if (err) 
-    {
-      console.log("BAD THING!");
-      return res.sendStatus(400);
-    } 
-    res.send(foods);
-  })
-});
+
+// app.get("/foods", function (req, res){
+//   // render foods index as JSON
+//   db.Food.find({}, function(err, foods){
+//     if (err) 
+//     {
+//       console.log("BAD THING!");
+//       return res.sendStatus(400);
+//     } 
+//     res.send(foods);
+//   })
+// });
+
 
 app.listen(3000, function (){
   console.log("listening on port 3000");

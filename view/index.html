@@ -22,13 +22,12 @@
 	<div id="page-wrapper" class="container">
 		<h1>Let's play Catch Phrase!!</h1>
 		<br>
-		<div class="list-group">
-			<button type="button" class="list-group-item">Here</button>
-			<button type="button" class="list-group-item">Is</button>
-			<button type="button" class="list-group-item">My</button>
-			<button type="button" class="list-group-item">List</button>
-			<button type="button" class="list-group-item">!!!</button>
+		<div class="list-group" id="word_buttons">
+			<button type="button" class="list-group-item">word: https<br> definition: part of the application layer of Internet protocol suite that is used to transfer media across the world wide web</button>
 		</div>
 	</div>
 </body>
+<script type="text/template" id="words-template">
+	<button type="button" class="list-group-item"> <%= word %> <br> <%= definition %> </button>
+</script>
 </html>
