@@ -19,14 +19,23 @@
 </head>
 <body>
 	<br>
+	<!-- The contents of the page -->
 	<div id="page-wrapper" class="container">
+		<!-- My Page Header -->
 		<h1>Let's play Catch Phrase!!</h1>
 		<br>
-		<div class="list-group" id="word_buttons">
-			<button type="button" class="list-group-item">word: https<br> definition: part of the application layer of Internet protocol suite that is used to transfer media across the world wide web</button>
-		</div>
+    <!-- Form portion where you can input words -->
+    <form class="form-inline" id="new-food-form">
+      <input name="name" type="text" class="form-control" id="word-input" placeholder="Type word here">
+      <input name="yumminess" type="text" class="form-control" id="definition-input" placeholder="Type definition here">
+      <button type="submit" class="btn btn-default">Add</button>
+    </form>
+    <br>
+		<!-- Where my word list will go. They are in the form of buttons -->
+		<div class="list-group" id="word_buttons"></div>
 	</div>
 </body>
+<!-- The underscore template for each button -->
 <script type="text/template" id="words-template">
 	<button type="button" class="list-group-item"> <%= word %> <br> <%= definition %> </button>
 </script>
