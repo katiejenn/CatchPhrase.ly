@@ -25,18 +25,28 @@
 		<h1>Let's play Catch Phrase!!</h1>
 		<br>
     <!-- Form portion where you can input words -->
-    <form class="form-inline" id="new-food-form">
-      <input name="name" type="text" class="form-control" id="word-input" placeholder="Type word here">
-      <input name="yumminess" type="text" class="form-control" id="definition-input" placeholder="Type definition here">
+    <form class="form-inline" id="new-word-form">
+      <input name="word" type="text" class="form-control" id="word-input" placeholder="Type word here">
+      <input name="definition" type="text" class="form-control" id="definition-input" placeholder="Type definition here">
       <button type="submit" class="btn btn-default">Add</button>
     </form>
     <br>
+    <form class="form-inline" id="update-word-form">
+      <input name="original-word" type="text" class="form-control" id="word-update" placeholder="Type word here">
+      <input name="original-word" type="text" class="form-control" id="definition-update" placeholder="Updated definition here">
+      <button type="submit" class="btn btn-default">Change</button>
+    </form>
+    <br>
 		<!-- Where my word list will go. They are in the form of buttons -->
-		<div class="list-group" id="word_buttons"></div>
+		<div class="list-group" id="word_buttons"></div> 
+    <!-- <ul class="list-group" id="word_buttons"> 
+    </ul> -->
 	</div>
 </body>
 <!-- The underscore template for each button -->
 <script type="text/template" id="words-template">
-	<button type="button" class="list-group-item"> <%= word %> <br> <%= definition %> </button>
+	<button type="button" class="list-group-item"> <%= word %>: <br> <%= definition %> </button> 
+
+  <button data-_id="<%= _id %>" onclick="deleteWord(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 </script>
 </html>

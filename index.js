@@ -41,17 +41,37 @@ app.get("/words", function (req, res){
     res.send(words);
   })
 
+  //res.send(words);
+
 });
 
 
-app.post("/foods", function (req, res){
-
+app.post("/words", function (req, res){
+  console.log("here is where we have the issue")
   db.Words.create({word: req.body.word, definition: req.body.definition},function(err, words){
     if(err)console.log(err);
     console.log(words);
     res.send(words);
   });
 
+});
+
+app.delete("/words/:id", function (req, res){
+  var targetId = req.params.id;
+  db.Words.remove({_id: targetId}, function(err, word){
+    if(err) return console.log(err);
+    res.send(word);
+    console.log("removal of " + word.word + " successful.");
+  });
+});
+
+app.put("/words", function(req, res){
+  var wordToChange = req.body.word-update;
+  var newWord = {word: wordToChange,definition: req.body.definition-update};
+  db.Words.update({word: wordToChange}, newWord,function(err, word){
+      if(err)console.log(err);
+      res.send(word);
+  });
 });
 
 
